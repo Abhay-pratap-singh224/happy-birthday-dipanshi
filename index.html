@@ -204,17 +204,22 @@ to{width:100%}
 50%{border-color:transparent}
 }
 .giftBox{
-font-size:150px;
+font-size:220px;
 cursor:pointer;
-margin:40px auto;
+margin:20px auto;
 text-align:center;
 animation:bounce 1.5s infinite;
+transition:all .5s ease;
+}
+
+.giftBox.open{
+transform:scale(1.2) rotate(10deg);
 }
   
 .giftBox p{
 font-size:28px;
 font-weight:bold;
-margin-top:10px;
+margin-top:20px;
 color:white;
 }
   
@@ -276,9 +281,14 @@ Meri har dhadkaan mein tum ho..." ❤️
 <h2>🎂 Birthday Starts In 🎂</h2>
 <h1 id="countdown">00:00:00</h1>
 </div>
- <div class="giftBox" onclick="openGift()">
+ <div class="giftBox" id="giftBox" onclick="openGift()">
 🎁
 </div>
+
+<div class="giftText">
+Tap To Open My Gift ❤️
+</div>
+
 
 <div class="giftText">
 Tap To Open My Gift ❤️
@@ -464,7 +474,18 @@ String(s).padStart(2,"0");
 setInterval(updateCountdown,1000);
 updateCountdown();
   function openGift(){
-document.getElementById("giftMessage").style.display="block";
+
+var gift =
+document.getElementById("giftMessage");
+
+var box =
+document.getElementById("giftBox");
+
+gift.style.display="block";
+
+box.innerHTML="💝";
+box.classList.add("open");
+
 }
 </script>
 
