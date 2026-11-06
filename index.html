@@ -203,18 +203,21 @@ to{width:100%}
 @keyframes blink{
 50%{border-color:transparent}
 }
-  .giftBox{
-font-size:80px;
+.giftBox{
+font-size:150px;
 cursor:pointer;
-margin:30px auto;
+margin:40px auto;
+text-align:center;
 animation:bounce 1.5s infinite;
 }
-
+  
 .giftBox p{
-font-size:20px;
+font-size:28px;
+font-weight:bold;
 margin-top:10px;
+color:white;
 }
-
+  
 #giftMessage{
 display:none;
 font-size:35px;
@@ -224,7 +227,11 @@ margin:20px;
 text-shadow:0 0 10px pink;
 animation:popup 1s ease;
 }
-
+  giftText{**ont-size:24px;
+font-weight:bold;
+**lor:white;
+margin-top:-20px;
+}
 @keyframes bounce{
 50%{
 transform:translateY(-10px);
@@ -269,12 +276,15 @@ Meri har dhadkaan mein tum ho..." ❤️
 <h2>🎂 Birthday Starts In 🎂</h2>
 <h1 id="countdown">00:00:00</h1>
 </div>
-  <div class="giftBox" onclick="openGift()">
+ <div class="giftBox" onclick="openGift()">
 🎁
-<p>Open My Gift</p>
 </div>
 
-<div id="giftMessage">
+<div class="giftText">
+Tap To Open My Gift ❤️
+</div>
+
+<div id="giftMessage" style="display:none;">
 ❤️ Love You So Much My Love ❤️
 </div>
 
