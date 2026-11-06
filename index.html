@@ -178,16 +178,17 @@ let current = 0;
 
 slides[0].classList.add("active");
 
-function nextSlide() {
+function nextSlide(){
+
     slides[current].classList.remove("active");
 
     current = (current + 1) % slides.length;
 
     slides[current].classList.add("active");
+
 }
 
-// Automatically change photo every 3 seconds
-setInterval(nextSlide, 3000);
+setInterval(nextSlide,3000);
 
 .slide:nth-child(1){animation-delay:0s;}
 .slide:nth-child(2){animation-delay:3s;}
